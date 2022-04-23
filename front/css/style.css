@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    min-height: 100vh;
+    background-color: black;
+}
+section{
+    width: 100%;
+    min-height: 100vh;
+    background-color: aqua;
+}
+footer{
+    width: 100%;
+    min-height: 25vh;
+    background-color: blueviolet;
+}
