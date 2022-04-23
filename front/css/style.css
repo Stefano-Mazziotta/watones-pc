@@ -4,6 +4,8 @@
 :root {
     --fontPixeles: 'Press Start 2P', cursive;
     --fontDefault: 'Kanit', sans-serif;
+    --colorBlack: #2E2C2C; 
+    --colorWhite: #555151;
 }
 
 *{
@@ -15,15 +17,75 @@
 header{
     width: 100%;
     min-height: 100vh;
-    background-color: black;
+    background-color: var(--colorBlack);
 }
+/* ------------ section - cards ------------ */
 section{
     width: 100%;
     min-height: 100vh;
-    background-color: aqua;
+    background-color: var(--colorWhite);
 }
+section .main-wrap{
+    width: 90%;
+    height: 90vh;
+    border: 2px solid white;
+    margin-left: auto;
+    margin-right: auto;
+}
+section .main-wrap .title{
+    width: 100%;
+    font-size: 32px;
+    font-family: var(--fontPixeles);
+    text-align: center;
+    margin-top: 20px;
+    
+    background: linear-gradient(90deg, rgba(121,43,139,1) 0%, rgba(201,113,221,1) 87%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ------------ footer ------------ */
 footer{
     width: 100%;
-    min-height: 25vh;
-    background-color: blueviolet;
+    height: 200px;
+    background-color: var(--colorBlack);  
+    margin-bottom: 20px;  
+}
+footer .main-wrap{
+    width: 90%;
+    margin-left:auto;
+    margin-right:auto;
+}
+footer .main-wrap .container-icons{
+    width: 100%;
+    font-family: var(--fontPixeles);
+    color: whitesmoke;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer .main-wrap .container-icons .svg{
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+
+}
+footer .main-wrap .container-icons .svg.ak{
+    width: 75px;
+}
+footer .main-wrap .container-icons .svg.weed{
+    width: 50px;
+}
+footer .main-wrap .footer-copyright{
+    width: 100%;
+    display: block;
+
+    text-align: center;
+    font-size: 20px;
+    font-family: var(--fontDefault);
+    color: whitesmoke;
 }
