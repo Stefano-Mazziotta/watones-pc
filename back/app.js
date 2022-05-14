@@ -6,29 +6,37 @@ const mongoose = require('mongoose');
 
 const bodyParser= require('body-parser');
 
-const pibe = require('./models/cartas')
+const pibes = require('./models/cartas')
 
 require('dotenv/config');
 
+
+
 //MIDDLEWARE
-    app.use(bodyParser.json());
+app.use(bodyParser.json());
 
 //ROUTES
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+    try{
+        const pibardos = await pibes.find();
+        res.json(pibardos);
+    }catch (err) {
+        res.json({message: err});
+    }
 
-    res.send('q onda gato')
 })
 
 app.post('/pibe', (req, res) => { 
  console.log(req.body);
- const Pibe = new pibe({
-     name: req.body.name,
+
+
+ const Pibe = new pibes({
+     name:  req.body.name1,
      stat1: req.body.stat1,
      porc1: req.body.porc1});
 
  Pibe.save()
-     .then((data) => {
-         res.json(data);
+     .then(() => {
          console.log("creado papi");
      })
      
@@ -42,8 +50,7 @@ app.post('/pibe', (req, res) => {
 
 
 //Connect to de DB
-mongoose.connect(process.env.DB_CONNECTION, { },
-    
+mongoose.connect(process.env.DB_CONNECTION, { }, 
     () => console.log('entramo pa')
     );
     
