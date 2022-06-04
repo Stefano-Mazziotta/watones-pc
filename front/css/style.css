@@ -86,7 +86,7 @@ section .main-wrap .card .card__img .card__shadow-wrap{
     height: 100%;
     border-radius: 5px 5px 0px 0px;
 
-    background-color: rgba(0, 0, 0, .4);
+    background-color: rgba(0, 0, 0, .8);
     position: relative;
 
     display: flex;
@@ -138,14 +138,17 @@ section .main-wrap .card .card__img .card__shadow-wrap .card__info-wrap .info__s
 section .main-wrap .card .card__img .card__shadow-wrap .card__info-wrap .info__stat-wrap .stat__percentage-wrap{
     width: 60%;
     height: 10px;
-    border: 2px solid white;
     z-index: 1000;
     overflow: hidden;
+    border: 2px solid var(--secondaryColor);
+    /* border-radius: 3px; */
 }
 section .main-wrap .card .card__img .card__shadow-wrap .card__info-wrap .info__stat-wrap .stat__percentage-wrap .stat__percentage{
     width: 0%;
     height: 8px;
     background-color: white;
+    /* border-radius: 3px; */
+    
 
 }
 section .main-wrap .card .card__title-wrap{
